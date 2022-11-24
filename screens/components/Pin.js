@@ -1,13 +1,23 @@
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { AntDesign } from '@expo/vector-icons';
 
 const Pin = (props) => {
+
+    const [ratio, setRatio] = useState(1);
+
     const { image, title } = props;
+
+    useEffect(() => {
+        if (image) {
+            Image.getSize(image, (width, height) => setRatio(width / height));
+        }
+    }, [image])
+
     return (
         <View style={styles.imgPin}>
             <View>
-                <Image style={styles.bannerImg} source={{ uri: image }} />
+                <Image style={[styles.bannerImg, {aspectRatio: ratio}]} source={{ uri: image }} />
                 {/* hert icon section start */}
                 <Pressable 
                 // onPress={}
@@ -31,7 +41,7 @@ const styles = StyleSheet.create({
     bannerImg: {
         width: '100%',
         // height: 200,
-        aspectRatio: 1/1,
+        aspectRatio: 2/1,
         borderRadius: 15,
         // position: 'relative'
     },

@@ -4,11 +4,14 @@ import Pin from './components/Pin'
 
 const HomeScreen = () => {
   return (
-      <ScrollView style={styles.imgContainer}>
-        {/* Pin image */}
+      <ScrollView>
+        <View style={styles.imgContainer}>
+            {/* Pin image */}
         <Pin image={'https://cdn.pixabay.com/photo/2022/10/15/14/55/ornamental-plant-7523304_640.jpg'} title='title' />
         
         <Pin image={'https://cdn.pixabay.com/photo/2022/10/15/14/55/ornamental-plant-7523304_640.jpg'} title='title' />
+        <Pin image={'https://cdn.pixabay.com/photo/2022/10/15/14/55/ornamental-plant-7523304_640.jpg'} title='title' />
+        </View>
       </ScrollView>
   )
 }
@@ -16,11 +19,11 @@ const HomeScreen = () => {
 export default HomeScreen
 
 const styles = StyleSheet.create({
-    // imgContainer: {
-    //     width: '100%',
-    //     padding: 10,
-    //     flex: 1,
-    //     alignItems: 'center',
-    //     justifyContent: 'center',
-    // },
+    imgContainer: {
+        width: '100%',
+        padding: 10,
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 })

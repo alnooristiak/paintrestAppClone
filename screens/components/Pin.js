@@ -27,7 +27,7 @@ const Pin = (props) => {
                 </Pressable>
                 {/* hert icon section End */}
             </View>
-            <Text style={styles.bottomText}>{title}</Text>
+            <Text style={styles.bottomText} numberOfLines={2} >{title}</Text>
         </View>
     )
 }
@@ -37,18 +37,19 @@ export default Pin
 const styles = StyleSheet.create({
     imgPin: {
         width: '100%',
+        // flexBasis: '50%',
     },
     bannerImg: {
         width: '100%',
         // height: 200,
-        aspectRatio: 2/1,
+        // aspectRatio: 1/2,
         borderRadius: 15,
         // position: 'relative'
     },
     bottomText: {
-        padding: 10,
+        padding: 8,
         fontWeight: 'bold',
-        fontSize: 19,
+        fontSize: 14,
     },
     hertIcon: {
         position: 'absolute',

@@ -1,16 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import HomeScreen from './screens/HomeScreen';
-import PinScreen from './screens/PinScreen';
+import Navigation from './screens/navigation/Navigation';
 
 export default function App() {
   return (
-    <SafeAreaView >
-      <StatusBar style="auto" hidden  />
-      {/* Home screen section */}
-      {/* <HomeScreen /> */}
-      <PinScreen />
-    </SafeAreaView>
+    // <>
+     <SafeAreaView >
+       <StatusBar style="auto" hidden  />
+       <Navigation />
+     </SafeAreaView> 
+    // </>
   );
 }
 

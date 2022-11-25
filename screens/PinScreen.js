@@ -16,10 +16,12 @@ const PinScreen = () => {
 
   return (
     <View style={styles.pinMsec}>
-        <Image style={[styles.pinImg, {aspectRatio: ratio}]} source={{uri : pin.image}} />
-        <Pressable>
-            <AntDesign name="left" size={24} color="white" />
-        </Pressable>
+        <View style={styles.arrowImgSec}>
+            <Image style={[styles.pinImg, {aspectRatio: ratio}]} source={{uri : pin.image}} />
+            <Pressable style={styles.leftArrow}>
+                <AntDesign name="left" size={24} color="white" />
+            </Pressable>
+        </View>
         <Text style={styles.pinTitle}>{pin.title}</Text>
     </View>
   )
@@ -38,8 +40,16 @@ const styles = StyleSheet.create({
         // borderTopLeftRadius: 30,
     },
     pinTitle: {
-        padding: 8,
+        padding: 12,
         textAlign: 'center',
-        fontSize: 16,
+        fontSize: 17,
+    }, 
+    arrowImgSec: {
+        position: 'relative',
+    },
+    leftArrow: {
+        position: 'absolute',
+        top: 20,
+        left: 15,
     },
 })
